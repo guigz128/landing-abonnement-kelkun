@@ -295,6 +295,9 @@
       padding-top: 28px;
       border-top: 1px solid var(--c-neutral-200);
     }
+    .hero__stats > div {
+      flex: 1 1 0;
+    }
     .hero__stat-num {
       font-size: 20px;
       font-weight: 700;
@@ -558,7 +561,8 @@
     }
     .pricing-card--featured {
       border-color: var(--c-tertiary);
-      box-shadow: 0 0 0 5px rgba(255,193,20,.14);
+      outline: 4px solid rgba(255,193,20,.25);
+      outline-offset: 2px;
     }
     .pricing-card__dismiss {
       display: block;
@@ -638,6 +642,13 @@
       justify-content: center;
       gap: 16px 32px;
       margin-top: 40px;
+    }
+    @media (max-width: 640px) {
+      .trust-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 16px;
+      }
     }
     .trust-item {
       display: flex;
@@ -936,7 +947,7 @@
 
             <div class="hero__stats">
               <div>
-                <span class="hero__stat-num">+12 000</span>
+                <span class="hero__stat-num">+4 000</span>
                 <span class="hero__stat-label">professionnels inscrits</span>
               </div>
               <div>
@@ -997,13 +1008,13 @@
         <div class="section__header text-center">
           <p class="section__eyebrow">Vous vous reconnaissez ?</p>
           <h2 class="section__title">La prospection, ça dévore votre temps. Et vos marges.</h2>
-          <p class="section__sub">La plupart des artisans perdent 5 à 10 h par semaine à chercher des clients — sans garantie de résultat.</p>
+          <p class="section__sub">La plupart des artisans perdent <b>5 à 10 h par semaine</b> à chercher des clients — sans garantie de résultat.</p>
         </div>
         <div class="pain-grid">
           <div class="pain-card">
             <div class="pain-card__icon">⏰</div>
             <h3 class="pain-card__title">Trop de temps à prospecter</h3>
-            <p class="pain-card__text">Les appels à froid, les devis perdus, les plateformes à gérer… Vous êtes artisan, pas commercial à plein temps.</p>
+            <p class="pain-card__text">Les appels à froid, les devis perdus, les plateformes à gérer… Vous êtes un pro du bâtiment, pas commercial à plein temps.</p>
           </div>
           <div class="pain-card">
             <div class="pain-card__icon">⚔️</div>
@@ -1025,7 +1036,7 @@
         <div class="section__header text-center">
           <p class="section__eyebrow">La solution Kelkun Pro</p>
           <h2 class="section__title">Tout ce qui change avec votre abonnement</h2>
-          <p class="section__sub">Un seul abonnement pour remplir votre carnet de commandes, sans effort de prospection.</p>
+          <p class="section__sub">Un seul abonnement pour <b>remplir votre carnet de commandes</b>, sans effort de prospection.</p>
         </div>
 
         <div class="benefits-grid">
@@ -1070,7 +1081,7 @@
             </div>
             <h3 class="benefit-card__title">L'abonnement se rembourse tout seul.</h3>
             <p class="benefit-card__text">
-              <strong>5 crédits inclus chaque mois</strong>, soit 35 € de valeur offerte.
+              <strong>5 Krédits inclus chaque mois</strong>, soit 35 € de valeur offerte.
               L'abonnement Master se rembourse dès le premier chantier décroché. Sans effort.
             </p>
           </div>
@@ -1136,7 +1147,7 @@
         <div style="text-align:center; margin-top: 44px;">
           <a href="#tarifs" class="btn btn--dark btn--lg">Commencer mon essai gratuit</a>
           <p style="margin-top:12px; font-size:13px; color:var(--c-neutral-500);">
-            Aucune carte requise pour commencer · Résiliez en 1 clic à tout moment
+            Profil créé en 5 min · Premiers clients dès aujourd'hui
           </p>
         </div>
       </div>
@@ -1157,12 +1168,14 @@
 
           <!-- MASTER -->
           <div class="pricing-card">
-            <span class="pricing-card__dismiss" role="button" tabindex="0">Non merci</span>
-            <h3 class="pricing-card__name">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="#ffc114" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-              Master
+            <h3 class="pricing-card__name" style="justify-content:space-between">
+              <span style="display:flex;align-items:center;gap:8px">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="#ffc114" aria-hidden="true">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                Master
+              </span>
+              <span class="badge badge--teal">✦ Populaire</span>
             </h3>
             <div class="pricing-card__price">
               <span class="pricing-card__currency">29 €</span>
@@ -1186,7 +1199,7 @@
                 <span class="pricing-feature__check">
                   <svg width="10" height="8" viewBox="0 0 10 8" fill="none" stroke="#3faf38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4l2.5 2.5L9 1"/></svg>
                 </span>
-                <span><strong>+5 crédits offerts / mois</strong> — valeur 35 €</span>
+                <span><strong>+5 Krédits offerts / mois</strong> — valeur 35 €</span>
               </li>
               <li class="pricing-feature">
                 <span class="pricing-feature__check">
@@ -1196,7 +1209,7 @@
               </li>
             </ul>
             <div class="pricing-card__cta">
-              <a href="#" class="btn btn--outline btn--full">Essayer Master gratuitement</a>
+              <a href="#" class="btn btn--primary btn--full">Essayer Master gratuitement</a>
             </div>
             <p class="pricing-card__guarantee">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="#3faf38" aria-hidden="true"><path d="M6.5 0a6.5 6.5 0 100 13A6.5 6.5 0 006.5 0zm2.85 5.28l-3.25 3.25a.65.65 0 01-.92 0l-1.63-1.63a.65.65 0 01.92-.92l1.17 1.17 2.79-2.79a.65.65 0 01.92.92z"/></svg>
@@ -1206,15 +1219,21 @@
 
           <!-- PREMIUM -->
           <div class="pricing-card pricing-card--featured">
-            <span class="pricing-card__dismiss" role="button" tabindex="0">Non merci</span>
-            <div class="pricing-card__badge">
-              <span class="badge badge--hot">⭐ Le + populaire</span>
-            </div>
-            <h3 class="pricing-card__name">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="#e0a500" aria-hidden="true">
-                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm0 3h14v2H5v-2z"/>
-              </svg>
-              Premium
+            <h3 class="pricing-card__name" style="justify-content:space-between">
+              <span style="display:flex;align-items:center;gap:8px">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#e0a500" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm0 3h14v2H5v-2z"/>
+                </svg>
+                Premium
+              </span>
+              <span class="badge badge--hot">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+                  <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+                  <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+                </svg>
+                Tout en un
+              </span>
             </h3>
             <div class="pricing-card__price">
               <span class="pricing-card__currency" style="color:var(--c-tertiary-600)">79 €</span>
@@ -1232,7 +1251,7 @@
                 <span class="pricing-feature__check">
                   <svg width="10" height="8" viewBox="0 0 10 8" fill="none" stroke="#3faf38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4l2.5 2.5L9 1"/></svg>
                 </span>
-                <span><strong>+10 crédits offerts / mois</strong></span>
+                <span><strong>+10 Krédits offerts / mois</strong></span>
               </li>
               <li class="pricing-feature">
                 <span class="pricing-feature__check">
@@ -1368,13 +1387,13 @@
 
           <details class="faq-item">
             <summary class="faq-q">
-              Qu'est-ce qu'un crédit Kelkun et à quoi ça sert ?
+              Qu'est-ce qu'un Krédit Kelkun et à quoi ça sert ?
               <span class="faq-q__icon">+</span>
             </summary>
             <div class="faq-a">
-              Un crédit permet de déverrouiller les coordonnées d'un client pour une demande Travaux.
-              Chaque crédit vaut 7 €. Avec Master, vous recevez 5 crédits / mois (35 € offerts).
-              Avec Premium, 10 crédits / mois (70 € offerts). Ils se renouvellent chaque mois sans report.
+              Un Krédit permet de déverrouiller les coordonnées d'un client pour une demande Travaux.
+              Chaque Krédit vaut 7 €. Avec Master, vous recevez 5 Krédits / mois (35 € offerts).
+              Avec Premium, 10 Krédits / mois (70 € offerts). Ils se renouvellent chaque mois sans report.
             </div>
           </details>
 
@@ -1408,8 +1427,8 @@
               <span class="faq-q__icon">+</span>
             </summary>
             <div class="faq-a">
-              Le Master (29 €/mois) inclut votre profil mis en avant, 5 crédits/mois et une commission à 15 %.
-              Le Premium (79 €/mois) ajoute 10 crédits/mois, une commission encore plus basse à 12 %, une visibilité maximale
+              Le Master (29 €/mois) inclut votre profil mis en avant, 5 Krédits/mois et une commission à 15 %.
+              Le Premium (79 €/mois) ajoute 10 Krédits/mois, une commission encore plus basse à 12 %, une visibilité maximale
               et le service e-secrétariat qui gère vos demandes Kelkun à votre place. Idéal si vous avez un fort volume d'activité.
             </div>
           </details>
